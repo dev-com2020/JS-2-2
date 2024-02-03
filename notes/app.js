@@ -3,8 +3,8 @@ console.log('Start aplikacji');
 const fs = require('fs');
 const os = require('os');
 const notes = require('./notes');
+const yargs = require('yargs');
 
-console.log(process.argv);
 var command = process.argv[2];
 console.log('Command:', command);
 
