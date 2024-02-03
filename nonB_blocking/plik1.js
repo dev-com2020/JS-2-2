@@ -1,4 +1,4 @@
-var getUserSync = require('./getUserSync');
+var getUserSync = require('./biblioteki/getUserSync');
 
 console.log('starting user1');
 var user1 = getUserSync('123');

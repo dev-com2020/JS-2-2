@@ -1,4 +1,4 @@
-var getUser = require('./getUser');
+var getUser = require('./biblioteki/getUser');
 
 console.log('starting user1');
 getUser('123', function (user1) {
