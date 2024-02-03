@@ -8,3 +8,5 @@ module.exports.addNote = () => {
 module.exports.add = (a,b) => {
     return console.log(a + b);
 };
+
+module.exports.age = 30;

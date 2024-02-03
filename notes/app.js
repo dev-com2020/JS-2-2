@@ -6,7 +6,7 @@ const notes = require('./notes')
 
 var user = os.userInfo();
 // fs.appendFileSync('user1.txt','Witaj ' + user.username + "!");
-fs.appendFileSync('user2.txt',`Witaj ${user.username} !`);
+fs.appendFileSync('user2.txt',`Witaj ${user.username}, masz ${notes.age} !`);
 
 notes.addNote();
 notes.add(4,4);
