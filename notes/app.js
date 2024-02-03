@@ -12,7 +12,8 @@ console.log('Process:', process.argv);
 console.log('Yargs', argv);
 
 if (command === 'add') {
-    console.log("Dodaj informacje");
+    console.log("Dodaj nowe informacje");
+    notes.addNote(argv.title, argv.body);
 } else if (command === 'list') {
     console.log('Lista komunikatow');
 } else {
