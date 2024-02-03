@@ -10,16 +10,31 @@
             p {
                 display: none;
             }
+            .hide {
+                display: none;
+            }
+            .square {
+                height: 100px;
+                width: 100px;
+                background-color: chartreuse;
+            }
+            .square.blue {
+                background-color: blue;
+            }
         </style>
         <div id="red"></div>
         <div id="orange"></div>
         <div id="yellow"></div>
         <div id="green"></div>
         <div id="violet"></div>
-        <div id="tomek"></div>
+        <div id="tomek" class="square blue"></div>
         <button onclick="kolorki()">Pokaż kolory</button>
         <br>
         <p id="magia">Pojawiam się i znikam!</p>
         <button onclick="toggleDisplay()">MAGIA!</button>
+        <br>
+        <button onclick="znikam()">Zniknij Tomek!</button>
+        <br>
+        <button onclick="zmien()">Zmien kolor Tomka</button>
     </body>
 </html>

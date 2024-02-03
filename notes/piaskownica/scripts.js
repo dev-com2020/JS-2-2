@@ -1,15 +1,24 @@
-function kolorki(){
+function kolorki() {
     let divs = document.getElementsByTagName('div');
-    for(let i = 0; i < divs.length; i++){
+    for (let i = 0; i < divs.length; i++) {
         divs[i].style.backgroundColor = divs[i].id;
     }
 
 }
-function toggleDisplay(){
+function toggleDisplay() {
     let p = document.getElementById("magia");
-    if (p.style.display === 'none'){
+    if (p.style.display === 'none') {
         p.style.display = 'block';
-    }else{
+    } else {
         p.style.display = 'none';
     }
 }
+
+function znikam() {
+    document.getElementById("tomek").classList.add('hide');
+}
+
+function zmien(){
+    document.getElementById("tomek").classList.remove("blue");
+}
+
