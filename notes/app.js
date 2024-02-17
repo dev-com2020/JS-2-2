@@ -6,16 +6,29 @@ const notes = require('./notes');
 const yargs = require('yargs');
 
 const argv = yargs.argv;
-var command = process.argv[2];
-console.log('Command:', command);
-console.log('Process:', process.argv);
-console.log('Yargs', argv);
-
-if (command === 'add') {
-    console.log("Dodaj nowe informacje");
-    notes.addNote(argv.title, argv.body);
-} else if (command === 'list') {
-    console.log('Lista komunikatow');
-} else {
-    console.log('Komenda nie jest rozpoznana');
-}
+yargs.command({
+    command: 'add',
+    describe: 'Add a new note',
+    builder: {
+        title: {
+            describe: 'Note title',
+            demandOption: true,
+            type: 'string'
+        },
+        body: {
+            describe: 'Note body',
+            demandOption: true,
+            type: 'string'
+        }
+    },
+    handler(argv) {
+        notes.addNote(argv.title, argv.body);
+    }
+}).command({
+    command: 'list',
+    describe: 'List all notes',
+    handler() {
+        console.log('Listing all notes');
+        notes.listNotes();
+    }
+}).help().argv;
